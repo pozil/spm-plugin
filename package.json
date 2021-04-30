@@ -1,7 +1,7 @@
 {
     "name": "spm-plugin",
-    "description": "A plugin for interacting with the Salesforce Package Manager (SPM) registry",
-    "version": "1.0.0",
+    "description": "A Salesforce CLI plugin for interacting with the Salesforce Package Manager (SPM) registry",
+    "version": "0.1.0",
     "author": "pozil",
     "bugs": "https://github.com/pozil/spm-plugin/issues",
     "dependencies": {
@@ -30,7 +30,7 @@
         "tslint": "^5"
     },
     "engines": {
-        "node": ">=8.0.0"
+        "node": ">=14.0.0"
     },
     "files": [
         "/lib",

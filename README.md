@@ -2,7 +2,16 @@
 
 A Salesforce CLI plugin for interacting with the Salesforce Package Manager (SPM) registry.
 
-In short: this plugin provides a user-friendly way to install Salesforce packages using the package name instead fo the 15-18 character ID.
+In short: this plugin provides a user-friendly way to install Salesforce packages using a package name instead fo the package version ID.<br/>
+Moving from `sfdx force:package:install -p 04t1t000003DLAL` to `sfdx spm:install -n 'Streaming Monitor'`.
+
+## Plugin installation
+
+Install the plugin by running this command in a terminal:
+
+```sh
+sfdx plugins:install spm-plugin
+```
 
 ## Overview
 
@@ -19,7 +28,7 @@ As the saying goes "a picture is worth a thousand words" so here's how the Sales
 ## Command Reference
 
 <!-- toc -->
-* [spm-plugin](#spm-plugin)
+* [Salesforce Package Manager (SPM) Plugin](#salesforce-package-manager-spm-plugin)
 <!-- tocstop -->
 <!-- usage -->
 ```sh-session
@@ -27,7 +36,7 @@ $ npm install -g spm-plugin
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-spm-plugin/1.0.0 darwin-x64 node-v14.16.0
+spm-plugin/0.1.0 darwin-x64 node-v14.16.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -113,11 +122,11 @@ DESCRIPTION
         -i, --includebeta
 
 EXAMPLES
-  $ sfdx spm:install -n 'Streaming Monitor' -u ebikes       
+  $ sfdx spm:install -n 'Streaming Monitor' -u myOrg       
        Querying SPM registry... done
        Found package 'Streaming Monitor@3.2' with ID 04t1t000003DLAL
 
-       sfdx force:package:install --package 04t1t000003DLAL --targetusername ebikes --loglevel warn
+       sfdx force:package:install --package 04t1t000003DLAL --targetusername myOrg --loglevel warn
 
        PackageInstallRequest is currently InProgress. You can continue to query the status using
        sfdx force:package:install:report -i 0Hf3F0000005lG0SAI -u test-cus7edbxwwy1@example.com
@@ -140,7 +149,7 @@ EXAMPLES
        Successfully installed package [04t5p000001BloG]
 ```
 
-_See code: [lib/commands/spm/install.js](https://github.com/pozil/spm-plugin/blob/v1.0.0/lib/commands/spm/install.js)_
+_See code: [lib/commands/spm/install.js](https://github.com/pozil/spm-plugin/blob/v0.1.0/lib/commands/spm/install.js)_
 
 ## `sfdx spm:publish -v <string> [-z <url>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -180,5 +189,5 @@ EXAMPLE
        versionNumber: 3.2
 ```
 
-_See code: [lib/commands/spm/publish.js](https://github.com/pozil/spm-plugin/blob/v1.0.0/lib/commands/spm/publish.js)_
+_See code: [lib/commands/spm/publish.js](https://github.com/pozil/spm-plugin/blob/v0.1.0/lib/commands/spm/publish.js)_
 <!-- commandsstop -->

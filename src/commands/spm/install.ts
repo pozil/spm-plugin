@@ -23,11 +23,11 @@ export default class Install extends SfdxCommand {
     public static description = messages.getMessage('docCommand');
 
     public static examples = [
-        `$ sfdx spm:install -n 'Streaming Monitor' -u ebikes       
+        `$ sfdx spm:install -n 'Streaming Monitor' -u myOrg       
     Querying SPM registry... done
     Found package 'Streaming Monitor@3.2' with ID 04t1t000003DLAL
 
-    sfdx force:package:install --package 04t1t000003DLAL --targetusername ebikes --loglevel warn
+    sfdx force:package:install --package 04t1t000003DLAL --targetusername myOrg --loglevel warn
 
     PackageInstallRequest is currently InProgress. You can continue to query the status using
     sfdx force:package:install:report -i 0Hf3F0000005lG0SAI -u test-cus7edbxwwy1@example.com
