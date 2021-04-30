@@ -16,7 +16,7 @@
         "@oclif/dev-cli": "^1",
         "@oclif/plugin-help": "^2",
         "@oclif/test": "^1",
-        "@salesforce/dev-config": "1.4.1",
+        "@salesforce/dev-config": "2.1.0",
         "@salesforce/ts-sinon": "^1.3.5",
         "@types/chai": "^4",
         "@types/mocha": "^5",
