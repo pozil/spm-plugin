@@ -1,0 +1,21 @@
+{
+    "docCommand": "installs a package from the SPM registry\nThis commands locates the package version ID thanks to the SPM registry and uses 'force:package:install' to install it.\nAll 'force:package:install' options are supported appart from '-p, --package'.\nThe following flags are specific to this command:\n     -n, --name=name\n     -v, --version=version\n     -i, --includebeta",
+    "docNameFlag": "name of the package as specified in the SPM registry",
+    "docVersionFlag": "version of the package as specified in the SPM registry",
+    "docIncludeBetaFlag": "whether beta versions are included when searching for the latest versions",
+    "docRegistryUrlFlag": "the URL for a private SPM registry. If not specified, the public SPM registry is used.",
+    "docApexCompile": "compile all Apex in the org and package, or only Apex in the package; unlocked packages only",
+    "docPublishWait": "number of minutes to wait for subscriber package version ID to become available in the target org",
+    "docInstallationKey": "installation key for key-protected package",
+    "docNoPrompt": "do not prompt for confirmation",
+    "docSecurityType": "security access type for the installed package (deprecation notice: The default --securitytype value will change from AllUsers to AdminsOnly in v47.0 or later.)",
+    "docUpgradeType": "the upgrade type for the package installation; available only for unlocked packages",
+    "docWait": "number of minutes to wait for installation status",
+    "queryingRegistry": "Querying SPM registry",
+    "foundPackageVersion": "Found package '%s@%s' with ID %s",
+    "errorNoStablePackageResults": "Could not find a stable version for package '%s' in SPM registry.\nConsider including beta versions with the '-i' or '--includebeta' flag.",
+    "errorNoBetaPackageResults": "Could not find package '%s' in SPM registry",
+    "errorRegistryTimeout": "Connection to the SPM registry timed out",
+    "errorRegistryInternal": "An error occurred while communicating with the SPM registry: HTTP %d - %s",
+    "errorUnknown": "An unkown error occurred: %s"
+}

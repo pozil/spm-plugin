@@ -1,0 +1,8 @@
+# Project directories
+.nyc_output
+.vscode
+lib
+
+# Auto-generated files
+oclif.manifest.json
+README.md

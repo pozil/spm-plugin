@@ -1,0 +1,13 @@
+{
+    "docCommand": "publishes a package to the SPM registry",
+    "docVersionFlag": "Salesforce package version ID. A 15 or 18 character string that starts with '04t'",
+    "docRegistryUrlFlag": "the URL for a private SPM registry. If not specified, the public SPM registry is used.",
+    "updatingRegistry": "Updating SPM registry",
+    "successInfo": "Published package version:",
+    "errorInvalidIdFormat": "Invalid Salesforce package version ID: %s",
+    "errorSalesforce": "Salesforce reported the following errors:",
+    "errorPackageUnavailable": "Package version '%s' is unavailable in Salesforce",
+    "errorRegistryTimeout": "Connection to the SPM registry timed out",
+    "errorRegistryInternal": "An error occurred while communicating with the SPM registry: HTTP %d - %s",
+    "errorUnknown": "An unkown error occurred: %s"
+}
