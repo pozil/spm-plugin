@@ -1,3 +1,5 @@
+![npm](https://img.shields.io/npm/v/spm-plugin)
+
 # Salesforce Package Manager (SPM) Plugin
 
 A Salesforce CLI plugin for interacting with the Salesforce Package Manager (SPM) registry.
