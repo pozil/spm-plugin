@@ -3,7 +3,6 @@
     "description": "A Salesforce CLI plugin for interacting with the Salesforce Package Manager (SPM) registry",
     "version": "0.1.0",
     "author": "pozil",
-    "bugs": "https://github.com/pozil/spm-plugin/issues",
     "dependencies": {
         "@oclif/command": "^1",
         "@oclif/config": "^1",
@@ -55,7 +54,8 @@
             "@oclif/plugin-help"
         ]
     },
-    "repository": "pozil/spm-plugin",
+    "bugs": "https://github.com/pozil/spm-plugin/issues",
+    "repository": "github:pozil/spm-plugin",
     "scripts": {
         "lint": "tslint --project . --config tslint.json --format stylish",
         "prettier": "prettier --write '**/*.{js,json,md,ts,yaml,yml}'",
