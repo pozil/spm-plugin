@@ -30,6 +30,18 @@ As the saying goes "a picture is worth a thousand words" so here's how the Sales
 
 ![Publishing a package](gfx/publish-schema.jpeg)
 
+
+## Setting up a Private Registry
+
+You can set up a private registry by following these instructions:
+
+1. Install the [SPM Registry](https://github.com/pozil/spm-registry) server
+1. Use the SPM plugin with the `-z` or `--registryurl` flag:
+    ```
+    sfdx spm:install -n 'Streaming Monitor' --registryurl http://localhost:3002/
+    ```
+
+
 ## Command Reference
 
 This doc section is auto generated.
