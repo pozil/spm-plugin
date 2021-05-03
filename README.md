@@ -26,7 +26,7 @@ As the saying goes "a picture is worth a thousand words" so here's how the Sales
 
 ### Publishing a package
 
-ℹ️&nbsp;You do not need to own a package in order to publish it. You just need to know the package version ID.
+ℹ️&nbsp;&nbsp;You do not need to own a package in order to publish it. You just need to know the package version ID.
 
 ![Publishing a package](gfx/publish-schema.jpeg)
 
