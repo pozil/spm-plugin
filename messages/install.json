@@ -1,5 +1,5 @@
 {
-    "docCommand": "installs a package from the SPM registry\nThis commands locates the package version ID thanks to the SPM registry and uses 'force:package:install' to install it.\nAll 'force:package:install' options are supported appart from '-p, --package'.\nThe following flags are specific to this command:\n     -n, --name=name\n     -v, --version=version\n     -i, --includebeta",
+    "docCommand": "installs a package from the SPM registry\nThis commands locates the package version ID thanks to the SPM registry and uses 'force:package:install' to install it.\nAll 'force:package:install' options are supported appart from '-p, --package'.\nThe following flags are specific to this command:\n     -n, --name=name\n     -v, --version=version\n     -i, --includebeta\n     -z, --registryurl",
     "docNameFlag": "name of the package as specified in the SPM registry",
     "docVersionFlag": "version of the package as specified in the SPM registry",
     "docIncludeBetaFlag": "whether beta versions are included when searching for the latest versions",

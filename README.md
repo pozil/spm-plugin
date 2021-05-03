@@ -38,7 +38,7 @@ $ npm install -g spm-plugin
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-spm-plugin/0.1.0 darwin-x64 node-v14.16.0
+spm-plugin/1.0.0 darwin-x64 node-v14.16.0
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -54,14 +54,6 @@ USAGE
 installs a package from the SPM registry
 
 ```
-installs a package from the SPM registry
-This commands locates the package version ID thanks to the SPM registry and uses 'force:package:install' to install it.
-All 'force:package:install' options are supported appart from '-p, --package'.
-The following flags are specific to this command:
-     -n, --name=name
-     -v, --version=version
-     -i, --includebeta
-
 USAGE
   $ sfdx spm:install -n <string> [-v <string>] [-i] [-z <url>] [-a all|package] [-b <minutes>] [-k <string>] [-r] [-s 
   AllUsers|AdminsOnly] [-t DeprecateOnly|Mixed|Delete] [-w <minutes>] [-u <string>] [--apiversion <string>] [--json] 
@@ -122,6 +114,7 @@ DESCRIPTION
         -n, --name=name
         -v, --version=version
         -i, --includebeta
+        -z, --registryurl
 
 EXAMPLES
   $ sfdx spm:install -n 'Streaming Monitor' -u myOrg       
@@ -151,15 +144,13 @@ EXAMPLES
        Successfully installed package [04t5p000001BloG]
 ```
 
-_See code: [lib/commands/spm/install.js](https://github.com/pozil/spm-plugin/blob/v0.1.0/lib/commands/spm/install.js)_
+_See code: [lib/commands/spm/install.js](https://github.com/pozil/spm-plugin/blob/v1.0.0/lib/commands/spm/install.js)_
 
 ## `sfdx spm:publish -v <string> [-z <url>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
 publishes a package to the SPM registry
 
 ```
-publishes a package to the SPM registry
-
 USAGE
   $ sfdx spm:publish -v <string> [-z <url>] [--json] [--loglevel 
   trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
@@ -191,5 +182,5 @@ EXAMPLE
        versionNumber: 3.2
 ```
 
-_See code: [lib/commands/spm/publish.js](https://github.com/pozil/spm-plugin/blob/v0.1.0/lib/commands/spm/publish.js)_
+_See code: [lib/commands/spm/publish.js](https://github.com/pozil/spm-plugin/blob/v1.0.0/lib/commands/spm/publish.js)_
 <!-- commandsstop -->

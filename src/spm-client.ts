@@ -31,7 +31,6 @@ export class SpmClient {
                 this.registryConfig.port = parseInt(spmRegistryUrl.port, 10);
             }
         }
-        console.debug(this.registryConfig);
     }
 
     public async getPackageVersion(
