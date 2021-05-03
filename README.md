@@ -5,7 +5,8 @@
 A Salesforce CLI plugin for interacting with the Salesforce Package Manager (SPM) registry.
 
 In short: this plugin provides a user-friendly way to install Salesforce packages using a package name instead fo the package version ID.<br/>
-Moving from `sfdx force:package:install -p 04t1t000003DLAL` to `sfdx spm:install -n 'Streaming Monitor'`.
+Moving from `sfdx force:package:install -p 04t1t000003DLAL`<br/>
+...to `sfdx spm:install -n 'Streaming Monitor'`.
 
 ## Plugin installation
 
