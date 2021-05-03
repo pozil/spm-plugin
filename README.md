@@ -26,9 +26,13 @@ As the saying goes "a picture is worth a thousand words" so here's how the Sales
 
 ### Publishing a package
 
+ℹ️ You do not need to own a package in order to publish it. You just need to know the package version ID.
+
 ![Publishing a package](gfx/publish-schema.jpeg)
 
 ## Command Reference
+
+This doc section is auto generated.
 
 <!-- toc -->
 * [Salesforce Package Manager (SPM) Plugin](#salesforce-package-manager-spm-plugin)
