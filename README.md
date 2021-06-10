@@ -134,7 +134,7 @@ DESCRIPTION
         -z, --registryurl
 
 EXAMPLES
-  $ sfdx spm:install -n 'Streaming Monitor' -u myOrg       
+  $ sfdx spm:install -n 'Streaming Monitor' -u myOrg
        Querying SPM registry... done
        Found package 'Streaming Monitor@3.2' with ID 04t1t000003DLAL
 
@@ -161,7 +161,7 @@ EXAMPLES
        Successfully installed package [04t5p000001BloG]
 ```
 
-_See code: [lib/commands/spm/install.js](https://github.com/pozil/spm-plugin/blob/v1.0.0/lib/commands/spm/install.js)_
+_See code: [src/commands/spm/install.ts](https://github.com/pozil/spm-plugin/blob/v1.0.0/src/commands/spm/install.ts)_
 
 ## `sfdx spm:publish -v <string> [-z <url>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -199,5 +199,5 @@ EXAMPLE
        versionNumber: 3.2
 ```
 
-_See code: [lib/commands/spm/publish.js](https://github.com/pozil/spm-plugin/blob/v1.0.0/lib/commands/spm/publish.js)_
+_See code: [src/commands/spm/publish.ts](https://github.com/pozil/spm-plugin/blob/v1.0.0/src/commands/spm/publish.ts)_
 <!-- commandsstop -->
