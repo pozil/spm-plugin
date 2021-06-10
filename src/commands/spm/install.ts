@@ -23,7 +23,7 @@ export default class Install extends SfdxCommand {
     public static description = messages.getMessage('docCommand');
 
     public static examples = [
-        `$ sfdx spm:install -n 'Streaming Monitor' -u myOrg       
+        `$ sfdx spm:install -n 'Streaming Monitor' -u myOrg
     Querying SPM registry... done
     Found package 'Streaming Monitor@3.2' with ID 04t1t000003DLAL
 

@@ -11,7 +11,8 @@ import {
 Messages.importMessagesDirectory(__dirname);
 const messages = Messages.loadMessages('spm-plugin', 'publish');
 
-const REGEX_SALESFORCE_PACKAGE_VERSION_ID = /^04t([a-zA-Z0-9]{12}|[a-zA-Z0-9]{15})$/;
+const REGEX_SALESFORCE_PACKAGE_VERSION_ID =
+    /^04t([a-zA-Z0-9]{12}|[a-zA-Z0-9]{15})$/;
 
 export default class Publish extends SfdxCommand {
     public static description = messages.getMessage('docCommand');

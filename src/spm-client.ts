@@ -77,9 +77,8 @@ export class SpmClient {
                 });
                 // Handle end of response
                 response.on('end', () => {
-                    const responseBody = Buffer.concat(
-                        responseBodyBuffer
-                    ).toString();
+                    const responseBody =
+                        Buffer.concat(responseBodyBuffer).toString();
                     // Handle Salesforce errors (unknown/deprecated package...)
                     if (response.statusCode === 424) {
                         const errorData = JSON.parse(responseBody);
