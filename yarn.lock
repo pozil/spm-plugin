@@ -392,14 +392,17 @@
     cli-ux "^4.9.3"
 
 "@salesforce/core@^2.23.4", "@salesforce/core@^2.24.0":
-  version "2.24.0"
-  resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-2.24.0.tgz#b414731223fbd418e4db065959f73662dfd2a1bc"
-  integrity sha512-bdN9RNeS/8msA8U+F/6GEEteGNeE/uwc/av9nFSL0u+jyzA9llKnqKcuuAKa8YKuS1WHYfWs4mDNXST1gj+c1A==
+  version "2.25.1"
+  resolved "https://registry.yarnpkg.com/@salesforce/core/-/core-2.25.1.tgz#2be78b4fc824bfb69537174a0440ba35d19d8fa4"
+  integrity sha512-kRo1Uce8sFFXNBEu3odJ4zsFkvja+s/cmj7ICI6EvCsgwMHSLCw4P7zhqAsOJnBUim3M2qb4p0HpVtkQ4Cz3Kg==
   dependencies:
     "@salesforce/bunyan" "^2.0.0"
     "@salesforce/kit" "^1.5.0"
     "@salesforce/schemas" "^1.0.1"
     "@salesforce/ts-types" "^1.5.13"
+    "@types/graceful-fs" "^4.1.5"
+    "@types/jsforce" "^1.9.29"
+    "@types/mkdirp" "^1.0.1"
     debug "^3.1.0"
     graceful-fs "^4.2.4"
     jsen "0.6.6"
@@ -407,6 +410,7 @@
     jsonwebtoken "8.5.0"
     mkdirp "1.0.4"
     sfdx-faye "^1.0.9"
+    ts-retry-promise "^0.6.0"
 
 "@salesforce/dev-config@^2.1.2":
   version "2.1.2"
@@ -518,6 +522,13 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/graceful-fs@^4.1.5":
+  version "4.1.5"
+  resolved "https://registry.yarnpkg.com/@types/graceful-fs/-/graceful-fs-4.1.5.tgz#21ffba0d98da4350db64891f92a9e5db3cdb4e15"
+  integrity sha512-anKkLmZZ+xm4p8JWBf4hElkM4XR+EZeA2M9BAkkTldmcyDY4mbdIJnRghDJH3Ov5ooY7/UAoENtmdMSkaAd7Cw==
+  dependencies:
+    "@types/node" "*"
+
 "@types/jsforce@^1.9.29":
   version "1.9.29"
   resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.29.tgz#aeebb21d55706c5232e08f066a241349f743e507"
@@ -539,6 +550,13 @@
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.4.tgz#f0ec25dbf2f0e4b18647313ac031134ca5b24b21"
   integrity sha512-1z8k4wzFnNjVK/tlxvrWuK5WMt6mydWWP7+zvH5eFep4oj+UkrfiJTRtjCeBXNpwaA/FYqqtb4/QS4ianFpIRA==
+
+"@types/mkdirp@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@types/mkdirp/-/mkdirp-1.0.1.tgz#0930b948914a78587de35458b86c907b6e98bbf6"
+  integrity sha512-HkGSK7CGAXncr8Qn/0VqNtExEE+PHMWb+qlR1faHMao7ng6P3tAaoWWBMdva0gL5h4zprjIO89GJOLXsMcDm1Q==
+  dependencies:
+    "@types/node" "*"
 
 "@types/mocha@^8.2.2":
   version "8.2.2"
@@ -3651,6 +3669,11 @@ ts-node@^10.0.0:
     make-error "^1.1.1"
     source-map-support "^0.5.17"
     yn "3.1.1"
+
+ts-retry-promise@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/ts-retry-promise/-/ts-retry-promise-0.6.0.tgz#95643500d5388eed25abc90aa2e99c8b6c5a7bc9"
+  integrity sha512-8DF80uA7JPu6m8ouHxGkyBpPTIGQnsgIUgLDqcRaD7EEhVowjG72KqCX334gsa1P+AmzeTVdd/xEzVFCAuPCtg==
 
 tslib@2.2.0, tslib@^2.0.0, tslib@^2.0.3, tslib@^2.2.0:
   version "2.2.0"
