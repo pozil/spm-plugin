@@ -1,7 +1,7 @@
 import { URL } from 'url';
 
-const https = require('https');
-const http = require('http');
+import https = require('https');
+import http = require('http');
 
 const DEFAULT_REGISTRY_CONFIG = {
     protocol: 'https:',
@@ -16,7 +16,7 @@ export class SpmClient {
 
     private registryConfig = DEFAULT_REGISTRY_CONFIG;
 
-    public static getClient(spmRegistryUrl: URL) {
+    public static getClient(spmRegistryUrl: URL): SpmClient {
         if (!SpmClient.client) {
             SpmClient.client = new SpmClient(spmRegistryUrl);
         }
@@ -56,7 +56,7 @@ export class SpmClient {
     public async publishPackageVersion(
         versionId: string
     ): Promise<PackageVersion> {
-        let path = `${
+        const path = `${
             this.registryConfig.path
         }package-version/${encodeURIComponent(versionId)}`;
         const response = await this.request({ path, method: 'POST' });

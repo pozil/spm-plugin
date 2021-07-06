@@ -61,7 +61,7 @@
     "bugs": "https://github.com/pozil/spm-plugin/issues",
     "repository": "github:pozil/spm-plugin",
     "scripts": {
-        "lint": "eslint **/*.ts",
+        "lint": "eslint . --ext .ts",
         "prettier": "prettier --write '**/*.{js,json,md,ts,yaml,yml}'",
         "postpack": "rm -f oclif.manifest.json",
         "posttest": "tslint -p test -t stylish",

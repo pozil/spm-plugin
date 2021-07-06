@@ -219,7 +219,7 @@ export default class Install extends SfdxCommand {
 
     private waitForChildProcessExit(childProcess: ChildProcess): Promise<void> {
         return new Promise((resolve, reject) => {
-            childProcess.once('exit', (code: number, signal: string) => {
+            childProcess.once('exit', (code: number) => {
                 if (code === 0) {
                     resolve(undefined);
                 } else {

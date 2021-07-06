@@ -70,12 +70,12 @@ export default class Publish extends SfdxCommand {
             this.ux.log();
             this.ux.log(messages.getMessage('successInfo'));
             this.ux.styledObject(pakageInfo);
-        } catch (error) {
+        } catch (publishError) {
             this.ux.stopSpinner('ERROR');
             // Salesforce errors (unknown/deprecated package...)
-            if (error instanceof SalesforcePackageError) {
+            if (publishError instanceof SalesforcePackageError) {
                 this.ux.log(messages.getMessage('errorSalesforce'));
-                for (error of error.errors) {
+                for (const error of publishError.errors) {
                     this.ux.styledObject(error, ['title', 'detail']);
                     this.ux.log();
                 }
@@ -84,21 +84,21 @@ export default class Publish extends SfdxCommand {
                 );
             }
             // Registry connection timout
-            if (error instanceof TimeoutError) {
+            if (publishError instanceof TimeoutError) {
                 throw new SfdxError(
                     messages.getMessage('errorRegistryTimeout')
                 );
             }
             // Registry error
-            if (error instanceof RegistryError) {
+            if (publishError instanceof RegistryError) {
                 throw new SfdxError(
                     messages.getMessage('errorRegistryInternal', [
-                        error.statusCode,
-                        error.message
+                        publishError.statusCode,
+                        publishError.message
                     ])
                 );
             }
-            throw new SfdxError(messages.getMessage('errorUnknown', [error]));
+            throw new SfdxError(messages.getMessage('errorUnknown', [publishError]));
         }
 
         // Return an object to be displayed with --json
