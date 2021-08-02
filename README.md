@@ -1,4 +1,4 @@
-![npm](https://img.shields.io/npm/v/spm-plugin)
+[![npm](https://img.shields.io/npm/v/spm-plugin)](https://www.npmjs.com/package/spm-plugin)
 
 # Salesforce Package Manager (SPM) Plugin
 
