@@ -55,7 +55,7 @@ $ npm install -g spm-plugin
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-spm-plugin/1.0.0 darwin-x64 node-v14.16.0
+spm-plugin/1.0.0 darwin-x64 node-v14.17.3
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
