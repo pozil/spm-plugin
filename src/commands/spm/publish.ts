@@ -98,7 +98,9 @@ export default class Publish extends SfdxCommand {
                     ])
                 );
             }
-            throw new SfdxError(messages.getMessage('errorUnknown', [publishError]));
+            throw new SfdxError(
+                messages.getMessage('errorUnknown', [publishError])
+            );
         }
 
         // Return an object to be displayed with --json
