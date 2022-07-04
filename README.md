@@ -26,7 +26,8 @@ As the saying goes "a picture is worth a thousand words" so here's how the Sales
 
 ### Publishing a package
 
-ℹ️&nbsp;&nbsp;You do not need to own a package in order to publish it. You just need to know the package version ID.
+> **Note**
+> You do not need to own a package in order to publish it. You just need to know the package version ID.
 
 ![Publishing a package](gfx/publish-schema.jpeg)
 
@@ -96,7 +97,7 @@ OPTIONS
       do not prompt for confirmation
 
   -s, --securitytype=(AllUsers|AdminsOnly)
-      [default: AdminsOnly] security access type for the installed package (deprecation notice: The default --securitytype 
+      [default: AdminsOnly] security access type for the installed package (deprecation notice: The default --securitytype
       value will change from AllUsers to AdminsOnly in v47.0 or later.)
 
   -t, --upgradetype=(DeprecateOnly|Mixed|Delete)
@@ -128,37 +129,37 @@ DESCRIPTION
   it.
   All 'force:package:install' options are supported appart from '-p, --package'.
   The following flags are specific to this command:
-        -n, --name=name
-        -v, --version=version
-        -i, --includebeta
-        -z, --registryurl
+       -n, --name=name
+       -v, --version=version
+       -i, --includebeta
+       -z, --registryurl
 
 EXAMPLES
   $ sfdx spm:install -n 'Streaming Monitor' -u myOrg
-       Querying SPM registry... done
-       Found package 'Streaming Monitor@3.2' with ID 04t1t000003DLAL
+      Querying SPM registry... done
+      Found package 'Streaming Monitor@3.2' with ID 04t1t000003DLAL
 
-       sfdx force:package:install --package 04t1t000003DLAL --targetusername myOrg --loglevel warn
+      sfdx force:package:install --package 04t1t000003DLAL --targetusername myOrg --loglevel warn
 
-       PackageInstallRequest is currently InProgress. You can continue to query the status using
-       sfdx force:package:install:report -i 0Hf3F0000005lG0SAI -u test-cus7edbxwwy1@example.com
+      PackageInstallRequest is currently InProgress. You can continue to query the status using
+      sfdx force:package:install:report -i 0Hf3F0000005lG0SAI -u test-cus7edbxwwy1@example.com
 
 
   $ sfdx spm:install -n Quiz -i -u quizOrg -w 10
-       Querying SPM registry... done
-       Found package 'Quiz@2.6' with ID 04t5p000001BloG
+      Querying SPM registry... done
+      Found package 'Quiz@2.6' with ID 04t5p000001BloG
 
-       sfdx force:package:install --package 04t5p000001BloG --targetusername quizOrg --wait 10 --loglevel warn
+      sfdx force:package:install --package 04t5p000001BloG --targetusername quizOrg --wait 10 --loglevel warn
 
-       This package might send or receive data from these third-party websites:
+      This package might send or receive data from these third-party websites:
 
-       https://chart.googleapis.com
+      https://chart.googleapis.com
 
-       Grant access (y/n)?: y
+      Grant access (y/n)?: y
 
-       Waiting for the package install request to complete. Status = IN_PROGRESS
-       Waiting for the package install request to complete. Status = IN_PROGRESS
-       Successfully installed package [04t5p000001BloG]
+      Waiting for the package install request to complete. Status = IN_PROGRESS
+      Waiting for the package install request to complete. Status = IN_PROGRESS
+      Successfully installed package [04t5p000001BloG]
 ```
 
 _See code: [src/commands/spm/install.ts](https://github.com/pozil/spm-plugin/blob/v1.0.4/src/commands/spm/install.ts)_
@@ -188,15 +189,15 @@ OPTIONS
 
 EXAMPLE
   $ sfdx spm:publish -v 04t1t000003DLAL
-       Updating SPM registry... done
-       Published package version:
-       description:   Developer/Admin tool that lets you monitor streaming events (PushTopic, generic, standard/custom 
+      Updating SPM registry... done
+      Published package version:
+      description:   Developer/Admin tool that lets you monitor streaming events (PushTopic, generic, standard/custom 
   platform events, CDC and monitoring events)
-       id:            04t1t000003DLAL
-       name:          Streaming Monitor
-       publisher:     Salesforce Labs*
-       versionName:   Fixed custom CDC detection
-       versionNumber: 3.2
+      id:            04t1t000003DLAL
+      name:          Streaming Monitor
+      publisher:     Salesforce Labs*
+      versionName:   Fixed custom CDC detection
+      versionNumber: 3.2
 ```
 
 _See code: [src/commands/spm/publish.ts](https://github.com/pozil/spm-plugin/blob/v1.0.4/src/commands/spm/publish.ts)_
