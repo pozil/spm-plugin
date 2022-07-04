@@ -63,6 +63,7 @@ export class SpmClient {
         return response.data;
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     private async request(params: any, postData?: string): Promise<SpmReponse> {
         return new Promise((resolve, reject) => {
             const httpParams = Object.assign(this.registryConfig, params);
@@ -169,6 +170,7 @@ export class SalesforcePackageError extends Error {
 
 interface SpmReponse {
     statusCode: number;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     data: any;
 }
 

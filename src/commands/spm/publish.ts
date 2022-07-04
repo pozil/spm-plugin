@@ -1,11 +1,11 @@
 import { flags, SfdxCommand } from '@salesforce/command';
 import { Messages, SfdxError } from '@salesforce/core';
-import { AnyJson } from '@salesforce/ts-types';
 import {
     SpmClient,
     SalesforcePackageError,
     TimeoutError,
-    RegistryError
+    RegistryError,
+    PackageVersion
 } from '../../spm-client';
 
 Messages.importMessagesDirectory(__dirname);
@@ -48,7 +48,7 @@ export default class Publish extends SfdxCommand {
     protected static supportsDevhubUsername = false;
     protected static requiresProject = false;
 
-    public async run(): Promise<AnyJson> {
+    public async run(): Promise<PackageVersion> {
         let versionId = this.flags.version;
         if (!REGEX_SALESFORCE_PACKAGE_VERSION_ID.test(versionId)) {
             throw new SfdxError(
@@ -63,7 +63,7 @@ export default class Publish extends SfdxCommand {
             stdout: true
         });
 
-        let pakageInfo;
+        let pakageInfo : PackageVersion;
         try {
             pakageInfo = await spmClient.publishPackageVersion(versionId);
             this.ux.stopSpinner('done');
@@ -104,6 +104,6 @@ export default class Publish extends SfdxCommand {
         }
 
         // Return an object to be displayed with --json
-        return pakageInfo as any;
+        return pakageInfo;
     }
 }

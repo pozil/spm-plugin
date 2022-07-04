@@ -2,7 +2,6 @@ import { spawn, ChildProcess } from 'child_process';
 import { flags, SfdxCommand } from '@salesforce/command';
 import { Messages, SfdxError } from '@salesforce/core';
 import { Duration } from '@salesforce/kit';
-import { AnyJson } from '@salesforce/ts-types';
 import {
     SpmClient,
     PackageVersion,
@@ -113,7 +112,7 @@ export default class Install extends SfdxCommand {
     protected static supportsDevhubUsername = false;
     protected static requiresProject = false;
 
-    public async run(): Promise<AnyJson> {
+    public async run(): Promise<PackageVersion> {
         const { name, version, includebeta, registryurl } = this.flags;
 
         const spmClient = SpmClient.getClient(registryurl);
@@ -214,7 +213,7 @@ export default class Install extends SfdxCommand {
         await this.waitForChildProcessExit(childProcess);
 
         // Return an object to be displayed with --json
-        return packageVersion as any;
+        return packageVersion;
     }
 
     private waitForChildProcessExit(childProcess: ChildProcess): Promise<void> {
