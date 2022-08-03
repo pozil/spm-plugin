@@ -56,7 +56,7 @@ $ npm install -g spm-plugin
 $ sfdx COMMAND
 running command...
 $ sfdx (-v|--version|version)
-spm-plugin/1.0.5 darwin-x64 node-v14.17.3
+spm-plugin/1.0.6 darwin-x64 node-v14.17.3
 $ sfdx --help [COMMAND]
 USAGE
   $ sfdx COMMAND
@@ -162,7 +162,7 @@ EXAMPLES
       Successfully installed package [04t5p000001BloG]
 ```
 
-_See code: [src/commands/spm/install.ts](https://github.com/pozil/spm-plugin/blob/v1.0.5/src/commands/spm/install.ts)_
+_See code: [src/commands/spm/install.ts](https://github.com/pozil/spm-plugin/blob/v1.0.6/src/commands/spm/install.ts)_
 
 ## `sfdx spm:publish -v <string> [-z <url>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
 
@@ -200,5 +200,5 @@ EXAMPLE
       versionNumber: 3.2
 ```
 
-_See code: [src/commands/spm/publish.ts](https://github.com/pozil/spm-plugin/blob/v1.0.5/src/commands/spm/publish.ts)_
+_See code: [src/commands/spm/publish.ts](https://github.com/pozil/spm-plugin/blob/v1.0.6/src/commands/spm/publish.ts)_
 <!-- commandsstop -->
