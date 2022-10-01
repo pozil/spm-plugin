@@ -521,19 +521,12 @@
   dependencies:
     "@types/node" "*"
 
-"@types/jsforce@^1.9.41":
-  version "1.9.42"
-  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.42.tgz#3b860f0283b32809b9639456a78eba04aed51325"
-  integrity sha512-Ht5gIROhqGn5L5g0GEC7ADOWXI04yFRmxYqJxAAcpQ2II424tlu/I1LSbce5ckc97tb9BtTYMd9I+kRrvThp0w==
+"@types/jsforce@^1.9.41", "@types/jsforce@^1.9.43":
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.11.0.tgz#ae702453bf3c691dec543b85ff938a539506254d"
+  integrity sha512-8ofRXHaHk2tgmxbEusRlo+NTItEly+SA3F1c+HAglvJ8LQK7Wzkvxjh3F4C0/sIpxUsowwAEgysPKWVtsT446g==
   dependencies:
-    "@types/node" "*"
-
-"@types/jsforce@^1.9.43":
-  version "1.9.43"
-  resolved "https://registry.yarnpkg.com/@types/jsforce/-/jsforce-1.9.43.tgz#407907aac838b1828133958ef326ce649d03138f"
-  integrity sha512-9xTZYPI/WiSEaQxiBZLBZndRqzme2/QYfLARrajTVQ6RMPR0IGgGy/SiKmIEMYoLk0UESHynJPWscNtDGfuKOw==
-  dependencies:
-    "@types/node" "*"
+    "@types/node" ">=4.0"
 
 "@types/json-schema@^7.0.9":
   version "7.0.9"
@@ -557,10 +550,10 @@
   dependencies:
     "@types/node" "*"
 
-"@types/node@*":
-  version "16.11.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.11.6.tgz#6bef7a2a0ad684cf6e90fcfe31cecabd9ce0a3ae"
-  integrity sha512-ua7PgUoeQFjmWPcoo9khiPum3Pd60k4/2ZGXt18sm2Slk0W0xZTqt5Y0Ny1NyBiN1EVQ/+FaF9NcY4Qe6rwk5w==
+"@types/node@*", "@types/node@>=4.0":
+  version "18.7.23"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.7.23.tgz#75c580983846181ebe5f4abc40fe9dfb2d65665f"
+  integrity sha512-DWNcCHolDq0ZKGizjx2DZjR/PqsYwAcYUJmfMWqtVU2MBMG5Mo+xFZrhGId5r/O5HOuMPyQEcM6KUBp5lBZZBg==
 
 "@types/node@^12.19.9":
   version "12.20.55"
