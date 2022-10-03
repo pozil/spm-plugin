@@ -1,5 +1,5 @@
 import { flags, SfdxCommand } from '@salesforce/command';
-import { Messages, SfdxError } from '@salesforce/core';
+import { Messages, SfError } from '@salesforce/core';
 import {
     SpmClient,
     SalesforcePackageError,
@@ -49,9 +49,11 @@ export default class Publish extends SfdxCommand {
     protected static requiresProject = false;
 
     public async run(): Promise<PackageVersion> {
+        this.ux.warn('⚠️ The registry service will be discontinued on Nov 1st 2022 ⚠️');
+        
         let versionId = this.flags.version;
         if (!REGEX_SALESFORCE_PACKAGE_VERSION_ID.test(versionId)) {
-            throw new SfdxError(
+            throw new SfError(
                 messages.getMessage('errorInvalidIdFormat', [versionId])
             );
         }
@@ -79,26 +81,26 @@ export default class Publish extends SfdxCommand {
                     this.ux.styledObject(error, ['title', 'detail']);
                     this.ux.log();
                 }
-                throw new SfdxError(
+                throw new SfError(
                     messages.getMessage('errorPackageUnavailable', [versionId])
                 );
             }
             // Registry connection timout
             if (publishError instanceof TimeoutError) {
-                throw new SfdxError(
+                throw new SfError(
                     messages.getMessage('errorRegistryTimeout')
                 );
             }
             // Registry error
             if (publishError instanceof RegistryError) {
-                throw new SfdxError(
+                throw new SfError(
                     messages.getMessage('errorRegistryInternal', [
                         publishError.statusCode,
                         publishError.message
                     ])
                 );
             }
-            throw new SfdxError(
+            throw new SfError(
                 messages.getMessage('errorUnknown', [publishError])
             );
         }

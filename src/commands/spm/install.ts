@@ -1,6 +1,6 @@
 import { spawn, ChildProcess } from 'child_process';
 import { flags, SfdxCommand } from '@salesforce/command';
-import { Messages, SfdxError } from '@salesforce/core';
+import { Messages, SfError } from '@salesforce/core';
 import { Duration } from '@salesforce/kit';
 import {
     SpmClient,
@@ -113,6 +113,8 @@ export default class Install extends SfdxCommand {
     protected static requiresProject = false;
 
     public async run(): Promise<PackageVersion> {
+        this.ux.warn('⚠️ The registry service will be discontinued on Nov 1st 2022 ⚠️');
+
         const { name, version, includebeta, registryurl } = this.flags;
 
         const spmClient = SpmClient.getClient(registryurl);
@@ -140,11 +142,11 @@ export default class Install extends SfdxCommand {
             this.ux.stopSpinner('ERROR');
             if (error instanceof SpmPackageNotFoundError) {
                 if (includebeta) {
-                    throw new SfdxError(
+                    throw new SfError(
                         messages.getMessage('errorNoBetaPackageResults', [name])
                     );
                 } else {
-                    throw new SfdxError(
+                    throw new SfError(
                         messages.getMessage('errorNoStablePackageResults', [
                             name
                         ])
@@ -152,19 +154,19 @@ export default class Install extends SfdxCommand {
                 }
             }
             if (error instanceof TimeoutError) {
-                throw new SfdxError(
+                throw new SfError(
                     messages.getMessage('errorRegistryTimeout')
                 );
             }
             if (error instanceof RegistryError) {
-                throw new SfdxError(
+                throw new SfError(
                     messages.getMessage('errorRegistryInternal', [
                         error.statusCode,
                         error.message
                     ])
                 );
             }
-            throw new SfdxError(messages.getMessage('errorUnknown', [error]));
+            throw new SfError(messages.getMessage('errorUnknown', [error]));
         }
 
         // Prepare package install command
