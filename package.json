@@ -1,7 +1,7 @@
 {
     "name": "spm-plugin",
     "description": "A Salesforce CLI plugin for interacting with the Salesforce Package Manager (SPM) registry",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "author": "pozil",
     "dependencies": {
         "@oclif/command": "^1.8.18",
