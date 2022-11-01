@@ -2,7 +2,7 @@
 
 # Salesforce Package Manager (SPM) Plugin
 
-**⚠️ The registry service will be discontinued on Nov 1st 2022 ⚠️**
+**⚠️ The registry service was discontinued on Nov 1st 2022 ⚠️**
 
 A Salesforce CLI plugin for interacting with the unofficial [Salesforce Package Manager (SPM) registry](https://spm-registry.herokuapp.com/).
 
